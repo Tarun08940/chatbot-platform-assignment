@@ -1,42 +1,46 @@
-Chatbot Platform – Backend API
-
-Software Engineer Intern Assignment
+# Chatbot Platform – Backend API  
+**Software Engineer Intern Assignment**
 
 A backend API for a chatbot platform where authenticated users can create projects, manage prompts, and chat with an AI model. Built with clean architecture, secure authentication, and modern AI integration.
 
-🚀 Key Features
+---
 
-JWT authentication (Register / Login)
+## 🎥 Demo Video
+▶️ https://your-demo-video-link-here
 
-Project-based isolation & ownership
+The demo shows authentication, project creation, prompt setup, and an AI chat response.
 
-Prompt management per project
+---
 
-AI-powered chat endpoint
+## 🚀 Key Features
 
-Secure, RESTful API design
+- JWT authentication (Register / Login)
+- Project-based isolation and ownership
+- Prompt management per project
+- AI-powered chat endpoint
+- Secure RESTful API design
 
-🛠️ Tech Stack
+---
 
-Backend: Django, Django REST Framework
+## 🛠️ Tech Stack
 
-Auth: JWT (SimpleJWT)
+- **Backend:** Django, Django REST Framework  
+- **Authentication:** JWT (SimpleJWT)  
+- **AI Integration:** OpenAI Responses API  
+- **Database:** SQLite  
+- **Testing:** Postman  
 
-AI: OpenAI Responses API
+---
 
-Database: SQLite
+## ⚙️ Quick Setup
 
-Testing: Postman
-
-⚙️ Quick Setup
-git clone <repo-url>
+```bash
+git clone https://github.com/Tarun08940/chatbot-platform-assignment.git
 cd chatbot-platform-assignment/backend
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate
 pip install -r requirements.txt
-
-
-Create .env:
+Create a .env file:
 
 DEBUG=True
 SECRET_KEY=your-secret-key
@@ -50,7 +54,7 @@ Server runs at:
 
 http://127.0.0.1:8000/
 
-🔐 Auth Flow
+🔐 Authentication
 
 Register
 
@@ -62,26 +66,11 @@ Login
 POST /api/auth/login/
 
 
-Use returned access token:
+Use the returned access token:
 
 Authorization: Bearer <ACCESS_TOKEN>
 
-📡 Core API Endpoints
-
-Projects
-
-POST /api/projects/
-GET  /api/projects/
-
-
-Prompts
-
-POST /api/projects/{project_id}/prompts/
-GET  /api/projects/{project_id}/prompts/
-
-
-Chat (Main Feature)
-
+💬 Chat Endpoint (Core Feature)
 POST /api/projects/{project_id}/chat/
 
 {
@@ -92,30 +81,20 @@ POST /api/projects/{project_id}/chat/
 Response
 
 {
-  "reply": "Django is a Python web framework..."
+  "reply": "Django is a Python web framework that helps developers build web applications quickly..."
 }
 
 🧠 Design Highlights
 
-Strong project ownership enforcement
+Strict project ownership enforcement
 
 Prompt-based system context injection
 
 Stateless JWT authentication
 
-Uses latest OpenAI API (non-deprecated)
+Uses latest non-deprecated OpenAI API
 
-API-first design (no frontend required)
-
-🎥 Demo
-
-A short demo video shows:
-
-Authentication
-
-Project & prompt creation
-
-AI chat response
+API-first backend design
 
 👤 Author
 
