@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Project, Prompt, ChatMessage
 
-# Register your models here.
+admin.site.register(Project)
+admin.site.register(Prompt)
+admin.site.register(ChatMessage)
