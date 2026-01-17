@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zg@t6=fw4@pna^1e4w7v3xx53viu-ajc5lwj2@^8#2dg#5p!y2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -142,3 +142,8 @@ import os
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG") == "True"
+
+
+import os
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
