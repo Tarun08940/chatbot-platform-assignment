@@ -1,102 +1,83 @@
-# Chatbot Platform – Backend API  
+# Chatbot Platform – Backend API
+
 **Software Engineer Intern Assignment**
 
-A backend API for a chatbot platform where authenticated users can create projects, manage prompts, and chat with an AI model. Built with clean architecture, secure authentication, and modern AI integration.
+A backend API for a chatbot platform where authenticated users can create projects, manage prompts, and chat with an AI model.  
+Built with Django REST Framework, JWT authentication, and OpenAI integration.
+
+---
+
+## 🚀 Features
+
+- JWT Authentication (Register / Login)
+- Project-based access control
+- Prompt management per project
+- AI-powered chat endpoint
+- Secure environment-based configuration
+- Clean, modular backend architecture
+
+---
+
+## 🧠 Tech Stack
+
+- Python
+- Django
+- Django REST Framework
+- SimpleJWT (Authentication)
+- OpenAI API
+- SQLite (local development)
 
 ---
 
 ## 🎥 Demo Video
-▶️ https://your-demo-video-link-here
 
-The demo shows authentication, project creation, prompt setup, and an AI chat response.
+👉 **Demo Link:** https://your-demo-video-link-here
 
----
-
-## 🚀 Key Features
-
-- JWT authentication (Register / Login)
-- Project-based isolation and ownership
-- Prompt management per project
-- AI-powered chat endpoint
-- Secure RESTful API design
+The demo shows:
+- User authentication
+- Project creation
+- Authenticated AI chat requests
+- API testing via Postman
 
 ---
 
-## 🛠️ Tech Stack
+## 🧪 API Testing
 
-- **Backend:** Django, Django REST Framework  
-- **Authentication:** JWT (SimpleJWT)  
-- **AI Integration:** OpenAI Responses API  
-- **Database:** SQLite  
-- **Testing:** Postman  
+All endpoints were tested locally using **Postman**.
+
+Example flow:
+1. Register / Login
+2. Obtain JWT access token
+3. Create a project
+4. Send chat messages to AI endpoint using Bearer token
 
 ---
 
-## ⚙️ Quick Setup
+## ⚙️ Setup Instructions (Local)
 
 ```bash
 git clone https://github.com/Tarun08940/chatbot-platform-assignment.git
 cd chatbot-platform-assignment/backend
 python -m venv venv
-venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 Create a .env file:
 
-DEBUG=True
+env
+Copy code
 SECRET_KEY=your-secret-key
+DEBUG=True
 OPENAI_API_KEY=your-openai-api-key
+Run migrations and start server:
 
+bash
+Copy code
 python manage.py migrate
 python manage.py runserver
-
-
-Server runs at:
-
-http://127.0.0.1:8000/
-
-🔐 Authentication
-
-Register
-
-POST /api/auth/register/
-
-
-Login
-
-POST /api/auth/login/
-
-
-Use the returned access token:
-
-Authorization: Bearer <ACCESS_TOKEN>
-
-💬 Chat Endpoint (Core Feature)
-POST /api/projects/{project_id}/chat/
-
-{
-  "message": "Explain Django in simple terms"
-}
-
-
-Response
-
-{
-  "reply": "Django is a Python web framework that helps developers build web applications quickly..."
-}
-
-🧠 Design Highlights
-
-Strict project ownership enforcement
-
-Prompt-based system context injection
-
-Stateless JWT authentication
-
-Uses latest non-deprecated OpenAI API
-
-API-first backend design
+🌍 Deployment Note
+The application is deployment-ready and configured for cloud hosting.
+Live deployment was not included to avoid paid infrastructure for an assignment submission.
 
 👤 Author
-
-Tarun HT
-Software Engineer Intern Candidate
+Tarun
+Backend-focused Software Engineer Intern Candidate
